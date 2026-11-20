@@ -2,7 +2,7 @@
 # Gradle wrapper pengganti: kalau Gradle 8.7 belum terpasang, unduh sekali lalu jalankan.
 # Di Android Studio, Gradle Sync memakai gradle-wrapper.properties di atas.
 set -e
-GRADLE_VERSION="8.7"
+GRADLE_VERSION="8.9"
 GRADLE_HOME="${GRADLE_USER_HOME:-$HOME/.gradle}/wrapper/dists/gradle-$GRADLE_VERSION"
 if command -v gradle >/dev/null 2>&1; then
   exec gradle "$@"
