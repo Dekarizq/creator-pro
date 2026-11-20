@@ -9,7 +9,7 @@ Tema bersih putih + merah (seperti TubeCuan). **Semua tools jalan offline — ta
 - **AI Tools (offline, 6 fitur)** — Ide Konten (10 ide), Judul YouTube (10 judul + skor 0–100), Deskripsi Video (lengkap + timestamps), Naskah Video (hook + 3 poin + penutup), Keyword & Tag (20 tag + hitung 500 karakter), Ide YouTube Shorts (10 ide)
 - **Hasil bisa dipakai langsung** — tombol Salin dan Bagikan, plus Riwayat 10 hasil terakhir yang tersimpan di HP (ketuk untuk buka lagi, bisa dihapus)
 - **Kalkulator (3 alat)** — Jam Tayang, Target Monetisasi (sisa jam + sisa subs + perkiraan hari tercapai), Estimasi Penghasilan (views × RPM)
-- **Harga** — Gratis dulu (semua terbuka), paket nanti Rp2rb / Rp10rb (PALING LARIS) / Rp15rb, tombol Chat WhatsApp penjual 08989369554, bayar DANA / GoPay
+- **Harga** — Gratis dulu (semua terbuka), paket nanti Rp2rb / Rp10rb (PALING LARIS) / Rp15rb, bayar DANA / GoPay
 - **Mode online (opsional)** — kalau backend sudah dipasang, aplikasi coba server AI dulu; kalau server gagal, otomatis jatuh ke mode offline. `BASE_URL` masih placeholder = offline.
 - **File yang tadinya hilang** — `res/values` (strings, colors, themes), ikon launcher, Gradle wrapper, `.gitignore`, `proguard-rules.pro`
 - **Backend diperkuat** — endpoint `GET /health`, validasi input, rate limit 30 request / 10 menit per IP, timeout 45 detik

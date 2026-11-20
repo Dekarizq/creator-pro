@@ -4,7 +4,6 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -39,7 +38,6 @@ private val CardBg = Color.White
 private val Ink = Color(0xFF1A1A1A)
 private val Grey = Color(0xFF6B7280)
 
-private const val WA_NUMBER = "628989369554" // 08989369554
 private const val PREFS = "creatorpro"
 private const val HISTORY_KEY = "history_v1"
 
@@ -82,11 +80,6 @@ private fun shareText(context: Context, text: String) {
         putExtra(Intent.EXTRA_TEXT, text)
     }
     context.startActivity(Intent.createChooser(intent, "Bagikan hasil"))
-}
-
-private fun openWhatsApp(context: Context) {
-    val url = "https://wa.me/$WA_NUMBER?text=" + Uri.encode("Halo Bang Medhol, saya mau beli Creator Pro")
-    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
 }
 
 private fun formatTime(time: Long): String =
@@ -367,7 +360,7 @@ fun HargaScreen(modifier: Modifier = Modifier) {
         Text("Semua tools di versi ini GRATIS dulu — tanpa login dan tanpa batas. Paket di bawah ini untuk nanti, saat versi Pro dijual.")
         val paket = listOf(
             Triple("GRATIS — Coba Dulu", "Rp0", "Semua 6 tools AI offline • Kalkulator lengkap • Riwayat tersimpan di HP"),
-            Triple("COBA — Rp2.000", "Rp2.000", "Dukungan prioritas via WA • Update template judul terbaru"),
+            Triple("COBA — Rp2.000", "Rp2.000", "Dukungan prioritas • Update template judul terbaru"),
             Triple("LENGKAP — Rp10.000 ⭐ PALING LARIS", "Rp10.000", "Semua di paket Coba • Template naskah Pro • Ide konten 30 hari"),
             Triple("FULL + BONUS — Rp15.000", "Rp15.000", "Semua di paket Lengkap • Checklist upload Pro • Grup kreator")
         )
@@ -381,12 +374,7 @@ fun HargaScreen(modifier: Modifier = Modifier) {
             }
         }
         Text("CARA BELI (nanti saat Pro dijual)", fontWeight = FontWeight.Bold)
-        Text("1. Chat WhatsApp penjual di bawah ini.\n2. Bayar via DANA / GoPay.\n3. Kirim bukti bayar, lalu penjual kirim kode akses.", fontSize = 14.sp)
-        Button(onClick = { openWhatsApp(context) }, modifier = Modifier.fillMaxWidth()) {
-            Icon(Icons.Default.Chat, contentDescription = null)
-            Spacer(Modifier.width(8.dp))
-            Text("Chat WhatsApp Penjual — 08989369554")
-        }
+        Text("1. Bayar via DANA / GoPay.\n2. Kirim bukti bayar, lalu penjual kirim kode akses.", fontSize = 14.sp)
         Text("Kode akses Pro (disimpan penjual, jangan disebar): TC-COBA2 (Rp2rb) • TC-LENGKAP10 (Rp10rb) • TC-FULL15 (Rp15rb).", color = Grey, fontSize = 11.sp)
         Text("Pembayaran DANA / GoPay. Harga sekali bayar, bukan langganan bulanan.", color = Grey, fontSize = 12.sp)
     }
